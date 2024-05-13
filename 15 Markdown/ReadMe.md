@@ -46,7 +46,7 @@ Once the Markdown content is parsed, it can be seamlessly integrated into views 
 
 ```
 <div class="post-content">
-    {{! $post->description !}}
+    {! $post->description !}
 </div>
 ```
 
