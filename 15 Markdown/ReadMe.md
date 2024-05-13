@@ -46,11 +46,11 @@ Once the Markdown content is parsed, it can be seamlessly integrated into views 
 
 ```
 <div class="post-content">
-    {! $post->description !}
+    {!! $post->description !!}
 </div>
 ```
 
-Add this on your `post.show` page `{{! $post->description !}}` or in your view page
+Add this on your `post.show` page ` {!! $post->description !!}` or in your view page
 This will tell Laravel that you don't need protection and we want to render the post as an HTML tag
 
 ## Benefits of Markdown in Blogging
