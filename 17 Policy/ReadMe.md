@@ -48,7 +48,7 @@ protected $policies = [
 
 Once policies are defined and registered, you can enforce authorization checks in your application's controllers or routes using the authorize method or the `@can` Blade directive.
 
-authorize who can delete a update:
+authorize who can update a post:
 
 ```
 public function update(User $user, Post $post)
@@ -83,4 +83,12 @@ The `@can` directive allows you to control access to certain parts of your appli
     <!-- Render edit button -->
     <button>Edit Post</button>
 @endcan
+```
+
+## Policy middleware
+
+You can also apply the policy at your route as a middleware.
+
+```
+Route::update('post/edit/{user}/', [PostController::class, 'update'])->name('post.index')->middleware('auth', 'can:update,post');
 ```
