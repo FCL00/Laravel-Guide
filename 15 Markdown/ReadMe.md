@@ -1,6 +1,6 @@
 ## Markdown Support in Laravel
 
-Laravel provides built-in support for Markdown through the Str::markdown() method, allowing developers to parse Markdown content and render it as HTML. Let's take a closer look at how we can utilize this feature in a Laravel application:
+Laravel provides built-in support for Markdown through the `Str::markdown()` method, allowing developers to parse Markdown content and render it as HTML. Let's take a closer look at how we can utilize this feature in a Laravel application:
 
 ```
 public function show(Post $post){
@@ -46,11 +46,11 @@ Once the Markdown content is parsed, it can be seamlessly integrated into views 
 
 ```
 <div class="post-content">
-    {{! $post->description !}}
+    {!! $post->description !!}
 </div>
 ```
 
-Add this on your `post.show` page `{{! $post->description !}}` or in your view page
+Add this on your `post.show` page ` {!! $post->description !!}` or in your view page
 This will tell Laravel that you don't need protection and we want to render the post as an HTML tag
 
 ## Benefits of Markdown in Blogging
